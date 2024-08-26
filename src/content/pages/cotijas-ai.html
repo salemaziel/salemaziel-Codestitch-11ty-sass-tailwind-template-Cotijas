@@ -1,0 +1,194 @@
+---
+title: "Cotijas Mexican Grill"
+
+description: "Mexican Restaurant in San Diego, California"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "cotijas2/"
+eleventyNavigation:
+  key: Cotijas2
+  order: 200
+  hideOnMobile: false
+  hideOnDesktop: false
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<script src="https://cdn.tailwindcss.com"></script>
+<script
+	defer
+	src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+	rel="stylesheet"
+/>
+<style>
+	body {
+		font-family: "Poppins", sans-serif;
+	}
+</style>
+
+<!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+{% endblock %} {% block body %}
+<section class="relative h-[500px]">
+	<img
+		src="restaurant-interior.jpg"
+		alt="Restaurant Interior"
+		class="object-cover w-full h-full"
+	/>
+	<div
+		class="absolute inset-0 flex flex-col items-start justify-center p-8 bg-black bg-opacity-50"
+	>
+		<h1 class="mb-4 text-4xl font-bold text-white">
+			Cotijas Mexican Grill & Seafood
+		</h1>
+		<p class="mb-4 text-xl text-white">
+			3695 Fairmount Ave, San Diego, CA 92105
+		</p>
+		<p class="mb-6 text-xl text-white">
+			Mon-Thu: 8am - 10pm | Fri-Sun: 8am - 11pm
+		</p>
+		<button
+			class="px-6 py-3 text-xl text-white bg-red-500 rounded-lg hover:bg-red-600"
+		>
+			Order Online
+		</button>
+	</div>
+</section>
+
+<section class="container px-4 py-12 mx-auto">
+	<div class="flex flex-wrap -mx-4">
+		<div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
+			<h2 class="mb-4 text-3xl font-bold">
+				Welcome to Cotijas Mexican Grill and Seafood
+			</h2>
+			<p class="mb-4 text-gray-700">
+				Opening under new management in 2021. Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+				et dolore magna aliqua.
+			</p>
+			<p class="text-gray-700">
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+				ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+				reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+				qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="w-full px-4 md:w-1/2">
+			<img
+				src="restaurant-exterior.jpg"
+				alt="Restaurant Exterior"
+				class="w-full h-auto rounded-lg shadow-lg"
+			/>
+		</div>
+	</div>
+</section>
+
+<section class="py-12 bg-gray-100">
+	<div class="container px-4 mx-auto">
+		<h2 class="mb-8 text-3xl font-bold text-center">Specials</h2>
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+			<div
+				x-data="{ showDetails: false }"
+				class="relative overflow-hidden rounded-lg shadow-lg"
+			>
+				<img
+					src="special-dish-1.jpg"
+					alt="Special Dish 1"
+					class="object-cover w-full h-64"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100"
+					@mouseenter="showDetails = true"
+					@mouseleave="showDetails = false"
+				>
+					<div
+						x-show="showDetails"
+						x-transition
+						class="p-4 text-center text-white"
+					>
+						<h3 class="mb-2 text-xl font-bold">Tacos al Pastor</h3>
+						<p class="mb-2">Marinated pork, pineapple, onions, and cilantro</p>
+						<p class="font-bold">$12.99</p>
+					</div>
+				</div>
+			</div>
+			<div
+				x-data="{ showDetails: false }"
+				class="relative overflow-hidden rounded-lg shadow-lg"
+			>
+				<img
+					src="special-dish-2.jpg"
+					alt="Special Dish 2"
+					class="object-cover w-full h-64"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100"
+					@mouseenter="showDetails = true"
+					@mouseleave="showDetails = false"
+				>
+					<div
+						x-show="showDetails"
+						x-transition
+						class="p-4 text-center text-white"
+					>
+						<h3 class="mb-2 text-xl font-bold">Seafood Enchiladas</h3>
+						<p class="mb-2">Shrimp and crab meat in a creamy sauce</p>
+						<p class="font-bold">$15.99</p>
+					</div>
+				</div>
+			</div>
+			<div
+				x-data="{ showDetails: false }"
+				class="relative overflow-hidden rounded-lg shadow-lg"
+			>
+				<img
+					src="special-dish-3.jpg"
+					alt="Special Dish 3"
+					class="object-cover w-full h-64"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100"
+					@mouseenter="showDetails = true"
+					@mouseleave="showDetails = false"
+				>
+					<div
+						x-show="showDetails"
+						x-transition
+						class="p-4 text-center text-white"
+					>
+						<h3 class="mb-2 text-xl font-bold">Carne Asada Fries</h3>
+						<p class="mb-2">
+							Crispy fries topped with grilled steak and cheese
+						</p>
+						<p class="font-bold">$13.99</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container px-4 py-12 mx-auto">
+	<div class="flex flex-wrap -mx-4">
+		<div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
+			<h2 class="mb-4 text-3xl font-bold">Location</h2>
+			<p class="mb-2 text-xl">4321 Fairmount Ave</p>
+			<p class="mb-4 text-xl">San Diego, CA 92105</p>
+			<p class="mb-4 text-xl">619 555-5555</p>
+			<h3 class="mb-2 text-2xl font-bold">Hours of Operation</h3>
+			<p class="mb-1">Monday - Thursday: 8am - 10pm</p>
+			<p class="mb-4">Friday - Sunday: 8am - 11pm</p>
+		</div>
+		<div class="w-full px-4 md:w-1/2">
+			<img
+				src="map.png"
+				alt="Restaurant Location Map"
+				class="w-full h-auto rounded-lg shadow-lg"
+			/>
+		</div>
+	</div>
+</section>
+
+<!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+{% endblock %}

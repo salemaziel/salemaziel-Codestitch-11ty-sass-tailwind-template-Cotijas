@@ -1,37 +1,40 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
-permalink: '/'
-tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
+tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
   key: Home
   order: 100
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base2.html" %} {% block head %}
+<link
+	rel="stylesheet"
+	href="/assets/css/local.css"
+/>
+<link
+	rel="stylesheet"
+	href="/assets/css/critical.css"
+/>
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css"/>
-    <link rel="stylesheet" href="/assets/css/critical.css"/>
-
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script>
+<!-- Script for Netlify Identity -->
+<script
+	defer
+	src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+	if (window.netlifyIdentity) {
+		window.netlifyIdentity.on("init", (user) => {
+			if (!user) {
+				window.netlifyIdentity.on("login", () => {
+					document.location.href = "/admin/";
+				});
+			}
+		});
+	}
+</script>
 
     <!-- JSON Schema Markup -->
     <script type="application/ld+json">
@@ -70,319 +73,238 @@ eleventyNavigation:
             {% endif %}
         }
     </script>
-{% endblock %}
+{% endblock %} {% block body %}
 
-{% block body %}
+<section class="relative bg-gray-50 dark:bg-gray-800" x-data="{ mobileNavOpen: false }">
+	<div class="relative z-10 pt-12 pb-20 lg:pt-20" style="">
+	  <div class="container px-4 mx-auto">
+		<div class="flex flex-wrap -mx-4">
+		  <div class="flex items-center w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
+			<div class="w-full text-center lg:text-left">
+			  <div class="max-w-md mx-auto lg:mx-0"></div>
+			  <div class="max-w-sm mx-auto lg:mx-0">
+				<h2 class="mb-3 text-4xl font-bold leading-10 lg:text-5xl font-heading">
+				  <span class="w-full text-red-600">Cotijas</span>
+				  <br>
+				  
+					Mexican Grill
+					
+					& Seafood
+				  
+				</h2>
+				<div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
+				  <div class="w-full px-4 mb-4 md:w-1/2 md:mb-0">
+					<p class="mb-6 leading-loose text-gray-400">
+					  3595 Fairmount Ave
+					  <br>
+					  San Diego, CA, 92105
+					</p>
+				  </div>
+				  <div class="w-full px-4 mb-4 md:w-1/2 md:mb-0">
+					<p class="mb-0 leading-loose text-gray-400 text-nowrap">
+					  Mon-Thu: 8am - 10pm
+					  <br>
+					  Fri-Sun: 8am - 11pm
+					</p>
+				  </div>
+				</div>
+				<div class="justify-center text-center"><a class="inline-block w-full px-6 py-2 mb-3 font-semibold leading-loose text-center text-white transition duration-200 bg-red-600 lg:mb-0 lg:mr-0 lg:w-full hover:bg-red-800 rounded-l-xl rounded-t-xl" href="#">Order Online</a></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="w-full px-4 lg:w-1/2">
+			<div class="flex flex-wrap lg:mb-4 lg:ml-6">
+			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-1/3 rounded-4xl lg:rounded-br-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Camarones-a-la-diabla-jpg-1723801184194.webp" alt="">
+			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-2/3 rounded-4xl lg:rounded-bl-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/square-PXL-20240726-235637047-MP-2000x.jpg" alt="">
+			</div>
+			<div class="flex flex-wrap lg:mb-4 lg:mr-6">
+			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-2/3 rounded-4xl lg:rounded-br-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Beer-buckets.jpg" alt="">
+			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-1/3 rounded-4xl lg:rounded-bl-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Large-birria-tacos.jpg" alt="">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17"/>
-                    Get in Touch
-                </a>
-            </div>
-        </div>
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
 
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
+<section class="relative h-[500px]">
+	<img
+		src="assets/images/cotijas/restaurant-interior-cropped.jpg"
+		alt="Restaurant Interior"
+		class="object-cover w-full h-full"
+	/>
+	<div
+		class="absolute inset-0 flex flex-col items-start justify-center p-8 bg-black bg-opacity-50"
+	>
+	<div class="container px-4 mx-auto">
+		
+		<h1 class="mb-4 text-4xl font-bold text-white">
+			{{client.name}}
+		</h1>
+		<p class="mb-4 text-xl text-white">
+			{{client.address.lineOne}} <br />
+			{{client.address.city}} {{client.address.state}}
+			{{client.address.zip}}
+		</p>
+		<p class="mb-6 text-xl text-white">
+			Mon-Thu: 8am - 10pm | Fri-Sun: 8am - 11pm
+		</p>
+		<button
+			class="px-6 py-3 text-xl text-white bg-red-500 rounded-lg hover:bg-red-600"
+		>
+			Order Online
+		</button>
+	</div>
+	</div>
+</section>
 
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
+<section class="container px-4 py-12 mx-auto">
+	<div class="flex flex-wrap -mx-4">
+		<div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
+			<h2 class="mb-4 text-3xl font-bold">
+				Welcome to Cotijas Mexican Grill and Seafood
+			</h2>
+			<p class="mb-4 text-gray-700">
+				Opening under new management in 2021. Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+				et dolore magna aliqua.
+			</p>
+			<p class="text-gray-700">
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+				ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+				reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+				qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="w-full px-4 md:w-1/2">
+			<img
+				src="src/assets/images/restaurant-exterior.jpg"
+				alt="Restaurant Exterior"
+				class="w-full h-auto rounded-lg shadow-lg"
+			/>
+		</div>
+	</div>
+</section>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<section class="py-12 bg-gray-100">
+	<div class="container px-4 mx-auto">
+		<h2 class="mb-8 text-3xl font-bold text-center">Specials</h2>
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+			<div
+				x-data="{ showDetails: false }"
+				class="relative overflow-hidden rounded-lg shadow-lg"
+			>
+				<img
+					src="src/assets/images/4tacos-and-beer-special.jpg"
+					alt="4 Tacos and Beer Special"
+					class="object-cover w-full h-64"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100"
+					@mouseenter="showDetails = true"
+					@mouseleave="showDetails = false"
+				>
+					<div
+						x-show="showDetails"
+						x-transition
+						class="p-4 text-center text-white"
+					>
+						<h3 class="mb-2 text-xl font-bold">4 Tacos and Beer Special</h3>
+						<p class="mb-2">Four tacos with your choice of meat and beers.</p>
+						<p class="font-bold">$12.99</p>
+					</div>
+				</div>
+			</div>
+			<div
+				x-data="{ showDetails: false }"
+				class="relative overflow-hidden rounded-lg shadow-lg"
+			>
+				<img
+					src="src/assets/images/Beer-buckets_IMGP.jpg"
+					alt="Beer Buckets"
+					class="object-cover w-full h-64"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100"
+					@mouseenter="showDetails = true"
+					@mouseleave="showDetails = false"
+				>
+					<div
+						x-show="showDetails"
+						x-transition
+						class="p-4 text-center text-white"
+					>
+						<h3 class="mb-2 text-xl font-bold">Beer Buckets</h3>
+						<p class="mb-2">A bucket of your choice of beers.</p>
+						<p class="font-bold">$15.99</p>
+					</div>
+				</div>
+			</div>
+			<div
+				x-data="{ showDetails: false }"
+				class="relative overflow-hidden rounded-lg shadow-lg"
+			>
+				<img
+					src="src/assets/images/Happy hour special.jpg"
+					alt="Happy Hour Special"
+					class="object-cover w-full h-64"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 hover:opacity-100"
+					@mouseenter="showDetails = true"
+					@mouseleave="showDetails = false"
+				>
+					<div
+						x-show="showDetails"
+						x-transition
+						class="p-4 text-center text-white"
+					>
+						<h3 class="mb-2 text-xl font-bold">Happy Hour Special</h3>
+						<p class="mb-2">
+							Crispy fries topped with grilled steak and cheese
+						</p>
+						<p class="font-bold">$13.99</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77"/>
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
+<section class="container px-4 py-12 mx-auto">
+	<div class="flex flex-wrap -mx-4">
+		<div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
+			<h2 class="mb-4 text-3xl font-bold">Location</h2>
+			<p class="mb-2 text-xl">{{client.name}}</p>
+			<p class="mb-4 text-xl">{{client.address.city}} {{client.address.state}}
+				{{client.address.zip}}</p>
+			<p class="mb-4 text-xl">{{client.phoneFormatted}}</p>
+			<h3 class="mb-2 text-2xl font-bold">Hours of Operation</h3>
+			<p class="mb-1">Monday - Thursday: 8am - 10pm</p>
+			<p class="mb-4">Friday - Sunday: 8am - 11pm</p>
+		</div>
+		<div class="w-full px-4 md:w-1/2">
+		<!--	<img
+				src="map.png"
+				alt="Restaurant Location Map"
+				class="w-full h-auto rounded-lg shadow-lg"
+			/> -->
+			<iframe
+				src={{client.address.mapLink}}
+				width="600"
+				height="450"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				class="w-full h-auto rounded-lg shadow-lg"
+			></iframe>
+	</div>
+</section>
 
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
+{% include 'components/featured-specials-slider.html' %}
 
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
-                </li>
-            </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
-        </div>
-    </section>
-
-    {% include 'components/cta.html' %}
-{% endblock %}
+{% include 'components/cta.html' %} {% endblock %}

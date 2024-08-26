@@ -13,6 +13,7 @@ const configServer = require("./src/config/server");
 const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
+const now = String(Date.now())
 
 module.exports = function (eleventyConfig) {
     /**=====================================================================
@@ -27,12 +28,18 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addTemplateFormats("css");
     eleventyConfig.addExtension("css", configCss);
 
+    eleventyConfig.addWatchTarget('./tailwind.config.js')
+
+
     /**
      *  JS EXTENSION
      *  Sets up JS files as an eleventy template language, which are compiled by esbuild. Allows bundling and minification of JS
      */
     eleventyConfig.addTemplateFormats("js");
     eleventyConfig.addExtension("js", configJs);
+
+
+
     /**=====================================================================
                                 END EXTENSIONS
     =======================================================================*/
@@ -76,6 +83,9 @@ module.exports = function (eleventyConfig) {
     /** https://www.11ty.dev/docs/copy/ */
 
     eleventyConfig.addPassthroughCopy("./src/assets");
+    // Passthrough for CSS ? Unnecessary?
+    //eleventyConfig.addPassthroughCopy("src/assets/css");
+    eleventyConfig.addWatchTarget('././src/assets/scss/tailwind.scss')
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
     /**=====================================================================

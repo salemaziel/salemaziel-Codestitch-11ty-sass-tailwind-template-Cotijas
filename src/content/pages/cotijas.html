@@ -1,0 +1,493 @@
+---
+title: "Cotijas Mexican Grill "
+
+description: "Mexican Restaurant in San Diego, California"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "cotijas/"
+eleventyNavigation:
+  key: Cotijas
+  order: 200
+  hideOnMobile: false
+  hideOnDesktop: false
+---
+
+{% extends "layouts/base2.html" %} {% block head %}
+<!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+
+<!-- ============================================ -->
+<!--                 Cotijas Header               -->
+<!-- ============================================ -->
+<section class="w-full bg-red-600">
+	<div
+		class="justify-center mx-auto w-full leading-4 text-center break-words border-0 border-gray-200 border-solid lg:max-w-screen-lg lg:px-8 xl:max-w-screen-xl sm:max-w-screen-sm sm:px-6 md:max-w-screen-md text-zinc-800"
+	>
+		<header
+			class="flex flex-wrap justify-center items-center text-center border-0 border-gray-200 border-solid"
+		>
+			<img
+				src="https://cotijas-demo2.viadelweb.com/static/logo-6e92f9c8a2762c31eed792a4f77e7b09.png"
+				class="block p-0 my-3 mx-0 max-w-full h-auto align-middle border-0 border-gray-200 border-none"
+				alt="logo"
+			/>
+			<h1
+				class="p-0 mx-0 mt-0 mb-6 w-full font-sans text-5xl font-bold leading-none text-white uppercase border-0 border-gray-200 border-solid"
+				style="text-rendering: optimizelegibility"
+			>
+				{{ client.name }}
+			</h1>
+			<hr
+				class="box-content overflow-visible p-0 my-3 mx-0 w-1/2 h-px break-words bg-stone-300 bg-opacity-[0.2]"
+			/>
+			<span
+				class="mb-6 w-full text-3xl text-white border-0 border-gray-200 border-solid"
+				><strong
+					class="text-xl font-bold break-words border-0 border-gray-200 border-solid"
+					>Mon - Thu:</strong
+				>
+				8:00 am - 10:00 pm</span
+			><span
+				class="mb-6 w-full text-3xl text-white border-0 border-gray-200 border-solid"
+				><strong
+					class="text-xl font-bold break-words border-0 border-gray-200 border-solid"
+					>Fri - Sun:</strong
+				>
+				8:00 am - 11:00 pm</span
+			>
+		</header>
+	</div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Call now               -->
+<!-- ============================================ -->
+
+<section
+	class="w-full mx-auto bg-red-600 block border-0 border-gray-200 border-solid mx-auto"
+>
+	<div
+		class="flex bg-white items-center mx-auto max-w-screen-lg p-5 my-0 rounded-3xl border-0 border-gray-200 border-solid"
+		style="
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+			filter: drop-shadow(rgba(0, 0, 0, 0.6) 2px 2px 4px);
+		"
+	>
+		<i
+			class="p-5 mr-5 italic rounded-xl border-0 border-gray-200 border-solid bg-zinc-100"
+			><svg
+				width="28"
+				height="28"
+				viewBox="0 0 28 28"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				class="block italic align-middle border-0 border-gray-200 border-solid"
+			>
+				<path
+					d="M5.25 3.5C5.25 2.57174 5.61875 1.6815 6.27513 1.02513C6.9315 0.368749 7.82174 0 8.75 0L19.25 0C20.1783 0 21.0685 0.368749 21.7249 1.02513C22.3813 1.6815 22.75 2.57174 22.75 3.5V24.5C22.75 25.4283 22.3813 26.3185 21.7249 26.9749C21.0685 27.6313 20.1783 28 19.25 28H8.75C7.82174 28 6.9315 27.6313 6.27513 26.9749C5.61875 26.3185 5.25 25.4283 5.25 24.5V3.5ZM15.75 22.75C15.75 22.2859 15.5656 21.8408 15.2374 21.5126C14.9092 21.1844 14.4641 21 14 21C13.5359 21 13.0908 21.1844 12.7626 21.5126C12.4344 21.8408 12.25 22.2859 12.25 22.75C12.25 23.2141 12.4344 23.6592 12.7626 23.9874C13.0908 24.3156 13.5359 24.5 14 24.5C14.4641 24.5 14.9092 24.3156 15.2374 23.9874C15.5656 23.6592 15.75 23.2141 15.75 22.75Z"
+					fill="#FD2F25"
+					class="italic border-0 border-gray-200 border-solid"
+				></path></svg></i
+		><span class="font-medium text-center border-0 border-gray-200 border-solid"
+			>Call Now:<!-- -->
+			<a
+				href="tel:619-521-19744"
+				class="bg-transparent border-0 border-gray-200 border-solid cursor-pointer hover:outline-0"
+				>{{client.phoneFormatted}}</a
+			></span
+		>
+	</div>
+
+	<!-- ============================================ -->
+	<!--                  map               -->
+	<!-- ============================================ -->
+
+	<div
+		class="overflow-hidden my-0 pb-6 w-full max-w-screen-lg justify-center mx-auto rounded-3xl border-0 border-gray-200 border-solid"
+		style="
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+			filter: drop-shadow(rgba(0, 0, 0, 0.6) 2px 2px 4px);
+		"
+	>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.2222241727227!2d-117.10182485206931!3d32.74575493125262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9541492b869ab%3A0x88e5ef22dc35c99c!2sCotija's%20Mex%20Grill%20and%20Seafood!5e0!3m2!1sen!2sus!4v1691640682123!5m2!1sen!2sus"
+			loading="lazy"
+			width="100%"
+			height="100%"
+			class="block p-0 mx-0 mt-6 rounded-3xl mb-6 w-full align-middle border-0 border-gray-200 border-solid"
+			style="height: 40vh"
+		></iframe>
+		<div
+			class="flex items-center p-5 border-0 bg-white rounded-3xl border-gray-200 border-solid"
+		>
+			<i
+				class="p-5 mr-5 italic rounded-xl border-0 border-gray-200 border-solid bg-zinc-100"
+				><svg
+					width="28"
+					height="28"
+					viewBox="0 0 28 28"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="block italic align-middle border-0 border-gray-200 border-solid"
+				>
+					<path
+						d="M14 1.75C11.4482 1.75301 9.00181 2.76804 7.19742 4.57242C5.39304 6.37681 4.37801 8.82322 4.375 11.375C4.37194 13.4603 5.05311 15.4891 6.314 17.15C6.314 17.15 6.5765 17.4956 6.61938 17.5455L14 26.25L21.3841 17.5411C21.4226 17.4948 21.686 17.15 21.686 17.15L21.6869 17.1474C22.9471 15.4872 23.628 13.4594 23.625 11.375C23.622 8.82322 22.607 6.37681 20.8026 4.57242C18.9982 2.76804 16.5518 1.75301 14 1.75ZM14 14.875C13.3078 14.875 12.6311 14.6697 12.0555 14.2851C11.4799 13.9006 11.0313 13.3539 10.7664 12.7144C10.5015 12.0749 10.4322 11.3711 10.5673 10.6922C10.7023 10.0133 11.0356 9.38961 11.5251 8.90013C12.0146 8.41064 12.6383 8.0773 13.3172 7.94225C13.9961 7.8072 14.6999 7.87651 15.3394 8.14142C15.9789 8.40633 16.5256 8.85493 16.9101 9.4305C17.2947 10.0061 17.5 10.6828 17.5 11.375C17.4988 12.3029 17.1297 13.1925 16.4736 13.8486C15.8175 14.5047 14.9279 14.8738 14 14.875Z"
+						fill="#FD2F25"
+						class="italic border-0 border-gray-200 border-solid"
+					></path></svg></i
+			><span class="font-medium border-0 border-gray-200 border-solid"
+				>3695 Fairmount Ave, San Diego, CA 92105</span
+			>
+		</div>
+	</div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Order online button               -->
+<!-- ============================================ -->
+<section
+	class="block border-0 border-gray-200 border-solid bg-red-600 justify-center text-center mx-auto"
+>
+	<div class="max-w-screen-lg mx-auto justify-center">
+		<button
+			class="flex overflow-visible items-center p-5 bg-white mx-auto w-full text-center normal-case bg-transparent bg-none rounded-3xl border-0 border-gray-200 border-solid cursor-pointer"
+			data-glf-cuid="fcc9622a-6d23-4af1-895b-5ff1021ff7b0"
+			data-glf-ruid="83c6af9e-70c9-4dc6-b2e8-223c37d5f648"
+			id="glfButton0"
+			style="
+				box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+				filter: drop-shadow(rgba(0, 0, 0, 0.6) 2px 2px 4px);
+			"
+		>
+			<i
+				class="p-5 mr-5 italic rounded-xl border-0 border-gray-200 border-solid bg-zinc-100"
+				><svg
+					width="28"
+					height="28"
+					viewBox="0 0 28 28"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="block italic align-middle border-0 border-gray-200 border-solid"
+				>
+					<g
+						clip-path="url(#clip0_68_8)"
+						class="italic border-0 border-gray-200 border-solid"
+					>
+						<path
+							d="M768.338 896H704.338V915C704.338 950.333 694.505 978.5 674.838 999.5C655.171 1020.5 631.338 1028 603.338 1022L101.338 923C 73.338 917.667 49.5047 900.667 29.838 872C10.1713 843.333 0.338 811.333 0.338 776V128C0.338 92.6667 12.838 62.5 37.838 37.5C62.838 12.5 93.0047 0 128.338 0H768.338C803.671 0 833.838 12.5 858.838 37.5C883.838 62.5 896.338 92.6667 896.338 128V768C896.338 803.333 883.838 833.5 858.838 858.5C833.838 883.5 803.671 896 768.338 896ZM128.338 417C128.338 447.667 138.338 475.667 158.338 501C161.005 505 168.171 511.333 179.838 520C191.505 528.667 201.838 537.833 210.838 547.5C219.838 557.167 224.338 566.667 224.338 576V704C224.338 714 234.838 723.167 255.838 731.5C276.838 739.833 309.005 749.333 352.338 760C378.338 766.667 400.838 769.167 419.838 767.5C438.838 765.833 453.671 762 464.338 756C475.005 750 480.338 743.333 480.338 736V608C480.338 598.667 484.838 589.833 493.838 581.5C502.838 573.167 513.505 565.667 525.838 559C538.171 552.333 545.338 548 547.338 546C550.671 543.333 555.505 540.333 561.838 537C568.171 533.667 572.171 530.167 573.838 526.5C575.505 522.833 576.338 516.333 576.338 507C576.338 477 566.671 449.333 547.338 424C528.005 398.667 505.005 383.333 478.338 378C461.671 374.667 446.005 376.333 431.338 383C411.338 349 384.838 328.667 351.838 322C318.838 315.333 292.671 325 273.338 351C258.005 339 242.338 331.333 226.338 328C199.005 322.667 175.838 328.667 156.838 346C137.838 363.333 128.338 387 128.338 417ZM832.338 174C832.338 143.333 821.505 117.333 799.838 96C778.171 74.6667 752.338 64 722.338 64H257.338L603.338 132C631.338 138 655.171 155.333 674.838 184C694.505 212.667 704.338 244.333 704.338 279V832H722.338C752.338 832 778.171 821.167 799.838 799.5C821.505 777.833 832.338 752 832.338 722V174Z"
+							fill="black"
+							class="italic border-0 border-gray-200 border-solid"
+						></path>
+						<path
+							d="M18.7414 12.2467H19.5546C20.1295 12.2483 20.699 12.1358 21.2301 11.9158C21.7613 11.6957 22.2435 11.3725 22.6488 10.9648L27.125 6.45312L25.9098 5.22813L21.3391 9.79891L20.3891 8.84898L24.9599 4.27766L23.7021 3.05758L19.1483 7.61086L18.2011 6.66094L22.7719 2.08961L21.5469 0.875L17.0352 5.35117C16.6274 5.75661 16.3042 6.2389 16.0842 6.77013C15.8641 7.30135 15.7517 7.87095 15.7533 8.44594V9.25859L13.3946 11.6173L2.625 0.875C0.203437 3.8757 1.63352 9.39039 4.35969 12.1171L9.03547 16.7929C10.4874 18.2448 10.7756 18.3745 12.4228 17.7116C12.7777 17.5689 12.9068 17.5848 13.2377 17.9151L13.9486 18.5784C14.1088 18.7425 14.1127 18.7906 14.1127 19.1045V19.4075C14.1127 20.5603 14.8498 21.2231 15.3355 21.7175L21 27.125L24.9375 23.1875L16.3827 14.6054L18.7414 12.2467Z"
+							fill="#FD2F25"
+							class="italic border-0 border-gray-200 border-solid"
+						></path>
+						<path
+							d="M12.4343 19.3917C10.8035 19.7258 9.80328 20.0337 7.89086 18.1213C7.86023 18.0906 7.82852 18.0611 7.79789 18.0305L6.73148 16.9641L0.875 22.75L5.25 27.125L13.125 19.25L12.4343 19.3917Z"
+							fill="#FD2F25"
+							class="italic border-0 border-gray-200 border-solid"
+						></path>
+						<path
+							d="M768.338 896H704.338V915C704.338 950.333 694.505 978.5 674.838 999.5C655.171 1020.5 631.338 1028 603.338 1022L101.338 923C73.338 917.667 49.5047 900.667 29.838 872C10.1713 843.333 0.338 811.333 0.338 776V128C0.338 92.6667 12.838 62.5 37.838 37.5C62.838 12.5 93.0047 0 128.338 0H768.338C803.671 0 833.838 12.5 858.838 37.5C883.838 62.5 896.338 92.6667 896.338 128V768C896.338 803.333 883.838 833.5 858.838 858.5C833.838 883.5 803.671 896 768.338 896ZM128.338 417C128.338 447.667 138.338 475.667 158.338 501C161.005 505 168.171 511.333 179.838 520C191.505 528.667 201.838 537.833 210.838 547.5C219.838 557.167 224.338 566.667 224.338 576V704C224.338 714 234.838 723.167 255.838 731.5C276.838 739.833 309.005 749.333 352.338 760C378.338 766.667 400.838 769.167 419.838 767.5C438.838 765.833 453.671 762 464.338 756C475.005 750 480.338 743.333 480.338 736V608C480.338 598.667 484.838 589.833 493.838 581.5C502.838 573.167 513.505 565.667 525.838 559C538.171 552.333 545.338 548 547.338 546C550.671 543.333 555.505 540.333 561.838 537C568.171 533.667 572.171 530.167 573.838 526.5C575.505 522.833 576.338 516.333 576.338 507C576.338 477 566.671 449.333 547.338 424C528.005 398.667 505.005 383.333 478.338 378C461.671 374.667 446.005 376.333 431.338 383C411.338 349 384.838 328.667 351.838 322C318.838 315.333 292.671 325 273.338 351C258.005 339 242.338 331.333 226.338 328C199.005 322.667 175.838 328.667 156.838 346C137.838 363.333 128.338 387 128.338 417ZM832.338 174C832.338 143.333 821.505 117.333 799.838 96C778.171 74.6667 752.338 64 722.338 64H257.338L603.338 132C631.338 138 655.171 155.333 674.838 184C694.505 212.667 704.338 244.333 704.338 279V832H722.338C752.338 832 778.171 821.167 799.838 799.5C821.505 777.833 832.338 752 832.338 722V174Z"
+							fill="black"
+							class="italic border-0 border-gray-200 border-solid"
+						></path>
+					</g>
+					<defs class="italic border-0 border-gray-200 border-solid">
+						<clipPath
+							id="clip0_68_8"
+							class="italic border-0 border-gray-200 border-solid"
+						>
+							<rect
+								width="28"
+								height="28"
+								fill="white"
+								class="italic border-0 border-gray-200 border-solid"
+							></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</i>
+			<p
+				class="p-0 mx-auto text-center mt-0 mb-6 text-4xl font-medium leading-10 uppercase border-0 border-gray-200 border-solid"
+			>
+				Order Online
+			</p>
+		</button>
+	</div>
+
+	<!--<div
+		class="relative m-auto w-full border-0 border-gray-200 border-solid"
+		style="direction: ltr"
+	>
+		<div class="border-0 border-gray-200 border-solid">
+			<div
+				style="padding-left: 0px; padding-right: 0px"
+				class="overflow-hidden relative px-0 w-full h-auto text-zinc-800"
+			>
+				<ul
+					style="
+						transition: transform;
+						transform: translate3d(0px, 0px, 0px);
+						list-style: none none;
+					"
+					class="relative p-0 m-0 w-full h-full list-outside whitespace-nowrap"
+				>
+					<li
+						style="
+							width: 938.25px;
+							line-height: 0px;
+							list-style: outside none none;
+						"
+						class="inline-block relative p-0 m-0 w-64 h-full text-left align-top whitespace-normal"
+					>
+						<div
+							class="border-0 border-gray-200 border-solid"
+							data-value="1"
+							style="line-height: normal; list-style: outside none none"
+						>
+							1
+						</div>
+					</li>
+					<li
+						style="
+							width: 938.25px;
+							line-height: 0px;
+							list-style: outside none none;
+						"
+						class="inline-block relative p-0 m-0 w-64 h-full text-left align-top whitespace-normal"
+					>
+						<div
+							class="border-0 border-gray-200 border-solid"
+							data-value="2"
+							style="line-height: normal; list-style: outside none none"
+						>
+							2
+						</div>
+					</li>
+					<li
+						style="
+							width: 938.25px;
+							line-height: 0px;
+							list-style: outside none none;
+						"
+						class="inline-block relative p-0 m-0 w-64 h-full text-left align-top whitespace-normal"
+					>
+						<div
+							class="border-0 border-gray-200 border-solid"
+							data-value="3"
+							style="line-height: normal; list-style: outside none none"
+						>
+							3
+						</div>
+					</li>
+					<li
+						style="
+							width: 938.25px;
+							line-height: 0px;
+							list-style: outside none none;
+						"
+						class="inline-block relative p-0 m-0 w-64 h-full text-left align-top whitespace-normal"
+					>
+						<div
+							class="border-0 border-gray-200 border-solid"
+							data-value="4"
+							style="line-height: normal; list-style: outside none none"
+						>
+							4
+						</div>
+					</li>
+					<li
+						style="
+							width: 938.25px;
+							line-height: 0px;
+							list-style: outside none none;
+						"
+						class="inline-block relative p-0 m-0 w-64 h-full text-left align-top whitespace-normal"
+					>
+						<div
+							class="border-0 border-gray-200 border-solid"
+							data-value="5"
+							style="line-height: normal; list-style: outside none none"
+						>
+							5
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<ul
+			class="p-0 mx-1 mt-8 mb-1 list-outside text-center border-0 border-gray-200 border-solid"
+			style="list-style: none none"
+		>
+			<li
+				class="inline-block pl-0 mb-3 w-2 h-2 border-0 border-gray-200 border-solid cursor-pointer bg-slate-500"
+				style="border-radius: 50%; list-style: outside none none"
+			></li>
+			<li
+				class="inline-block pl-0 mb-3 w-2 h-2 bg-indigo-100 border-0 border-gray-200 border-solid cursor-pointer"
+				style="border-radius: 50%; list-style: outside none none"
+			></li>
+			<li
+				class="inline-block pl-0 mb-3 w-2 h-2 bg-indigo-100 border-0 border-gray-200 border-solid cursor-pointer"
+				style="border-radius: 50%; list-style: outside none none"
+			></li>
+			<li
+				class="inline-block pl-0 mb-3 w-2 h-2 bg-indigo-100 border-0 border-gray-200 border-solid cursor-pointer"
+				style="border-radius: 50%; list-style: outside none none"
+			></li>
+			<li
+				class="inline-block pl-0 mb-3 w-2 h-2 bg-indigo-100 border-0 border-gray-200 border-solid cursor-pointer"
+				style="border-radius: 50%; list-style: outside none none"
+			></li>
+		</ul>
+		<div class="inline-block py-2 px-1 w-1/2 text-right">
+			<div class="border-0 border-gray-200 border-solid">
+				<p
+					class="inline-block p-1 m-0 text-indigo-800 border-0 border-gray-200 border-solid opacity-40 cursor-pointer pointer-events-none hover:text-red-800"
+				>
+					<span
+						data-area="<"
+						class="relative capitalize border-0 border-gray-200 border-solid"
+						style="content: attr(data-area)"
+					></span>
+				</p>
+			</div>
+		</div>
+		<div class="inline-block py-2 px-1 w-1/2 text-left">
+			<div class="border-0 border-gray-200 border-solid">
+				<p
+					class="inline-block p-1 m-0 text-indigo-800 border-0 border-gray-200 border-solid cursor-pointer hover:text-red-800"
+				>
+					<span
+						data-area=">"
+						class="relative capitalize border-0 border-gray-200 border-solid"
+						style="content: attr(data-area)"
+					></span>
+				</p>
+			</div>
+		</div>
+	</div>-->
+</section>
+
+<!-- ============================================ -->
+<!--                 Most mentioned dishes              -->
+<!-- ============================================ -- >
+
+<section
+	class="block bg-red-600 border-0 border-gray-200 pb-6 mx-auto border-solid"
+>
+	<h3
+		class="p-0 mx-0 mt-0 font-sans text-2xl font-bold leading-8 text-center text-white uppercase border-0 border-gray-200 border-solid"
+		style="text-rendering: optimizelegibility"
+	>
+		Most mentioned dishes
+	</h3>
+	<div class="border-0 border-gray-200 border-solid"></div>
+	<div class="border-0 border-gray-200 border-solid">
+		<div class="border-0 border-gray-200 border-solid"></div>
+	</div>
+</section>
+-->
+<!-- ============================================ -->
+<!--                 Updates             -->
+<!-- ============================================ -->
+<section
+	class="block bg-red-600 mx-auto pb-6 justify-center text-center border-0 border-gray-200 border-solid"
+>
+	<h3
+		class="p-0 pt-6 mx-auto mt-0 mb-6 font-sans text-2xl font-bold leading-8 text-center text-white uppercase border-0 border-gray-200 border-solid"
+		style="text-rendering: optimizelegibility"
+	>
+		Updates From This Business
+	</h3>
+	<div
+		class="border-0 border-gray-200 border-solid mx-auto justify-center max-w-screen-lg"
+	>
+		<div
+			class="flex bg-white overflow-hidden relative items-center p-5 my-6 rounded-3xl border-0 border-gray-200 border-solid"
+			style="
+				box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+				min-height: 18.6rem;
+			"
+		>
+			<div
+				class="text-white border-0 border-gray-200 border-solid"
+				style="z-index: 9"
+			>
+				<h4
+					class="p-0 mx-0 mt-0 mb-6 font-sans text-base font-bold border-0 border-gray-200 border-solid"
+					style="line-height: 1.1; text-rendering: optimizelegibility"
+				>
+					Taco Tuesday
+				</h4>
+				<p class="p-0 mx-0 mt-0 mb-6 border-0 border-gray-200 border-solid">
+					Come join us every Tuesday for $1.50 mini tacos all day long!
+				</p>
+			</div>
+			<img
+				class="block absolute top-0 left-0 z-0 p-0 mx-0 mt-0 mb-6 w-full max-w-full h-auto align-middle border-0 border-gray-200 border-none"
+				src="https://cotijas-demo2.viadelweb.com/static/business_bg-65caf39b74a3a4bd08a3b6c63ae8c67f.png"
+				alt="Business Updates"
+			/>
+		</div>
+		<div
+			class="flex bg-white overflow-hidden relative items-center p-5 my-6 rounded-3xl border-0 border-gray-200 border-solid"
+			style="
+				box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+				min-height: 18.6rem;
+			"
+		>
+			<div
+				class="text-white border-0 border-gray-200 border-solid"
+				style="z-index: 9"
+			>
+				<h4
+					class="p-0 mx-0 mt-0 mb-6 font-sans text-base font-bold border-0 border-gray-200 border-solid"
+					style="line-height: 1.1; text-rendering: optimizelegibility"
+				>
+					Taco Tuesday
+				</h4>
+				<p class="p-0 mx-0 mt-0 mb-6 border-0 border-gray-200 border-solid">
+					Come join us every Tuesday for $1.50 mini tacos all day long!
+				</p>
+			</div>
+			<img
+				class="block absolute top-0 left-0 z-0 p-0 mx-0 mt-0 mb-6 w-full max-w-full h-auto align-middle border-0 border-gray-200 border-none"
+				src="https://cotijas-demo2.viadelweb.com/static/business_bg-65caf39b74a3a4bd08a3b6c63ae8c67f.png"
+				alt="Business Updates"
+			/>
+		</div>
+		<div
+			class="flex bg-white overflow-hidden relative items-center p-5 my-6 rounded-3xl border-0 border-gray-200 border-solid"
+			style="
+				box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+				min-height: 18.6rem;
+			"
+		>
+			<div
+				class="text-white border-0 border-gray-200 border-solid"
+				style="z-index: 9"
+			>
+				<h4
+					class="p-0 mx-0 mt-0 mb-6 font-sans text-base font-bold border-0 border-gray-200 border-solid"
+					style="line-height: 1.1; text-rendering: optimizelegibility"
+				>
+					Taco Tuesday
+				</h4>
+				<p class="p-0 mx-0 mt-0 mb-6 border-0 border-gray-200 border-solid">
+					Come join us every Tuesday for $1.50 mini tacos all day long!
+				</p>
+			</div>
+			<img
+				class="block absolute top-0 left-0 z-0 p-0 mx-0 mt-0 mb-6 w-full max-w-full h-auto align-middle border-0 border-gray-200 border-none"
+				src="https://cotijas-demo2.viadelweb.com/static/business_bg-65caf39b74a3a4bd08a3b6c63ae8c67f.png"
+				alt="Business Updates"
+			/>
+		</div>
+	</div>
+</section>
+
+{% endblock %} {% block body %}
+
+<!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+{% endblock %}
