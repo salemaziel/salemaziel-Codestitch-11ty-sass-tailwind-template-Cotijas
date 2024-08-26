@@ -10,12 +10,12 @@ module.exports = {
         "state": "CA",
         "zip": "92105",
         "country": "US",
-        "mapLink": '"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.2222241727227!2d-117.10182485206931!3d32.74575493125262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9541492b869ab%3A0x88e5ef22dc35c99c!2sCotija&#39;s%20Mex%20Grill%20and%20Seafood!5e0!3m2!1sen!2sus!4v1691640682123!5m2!1sen!2sus"'
+        "mapLink": "",
     },
     "socials": {
         "facebook": "https://www.facebook.com/",
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://cotijas-fairmount.netlify.app"
+    "domain": "https://cotijas-demo11.netlify.app"
 };
