@@ -2,6 +2,9 @@ backend:
     name: git-gateway
     branch: main
 
+
+# publish_mode: editorial_workflow
+
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
 logo_url: https://codestitch.app/frontend/images/logo.png
@@ -30,3 +33,22 @@ collections:
           - { label: "Featured Image", name: "image", widget: "image" }
           - { label: "Image Caption", name: "imageAlt", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+
+    - name: "homepage"
+      label: "Home Page"
+      file: "src/index.html"
+      fields:
+          - { label: "Welcome Message", name: "welcome_message", widget: "string" }
+          - { label: "Opening Info", name: "opening_info", widget: "text" }
+          - { label: "Hours of Operation", name: "hours_of_operation", widget: "text" }
+          - { label: "Location", name: "location", widget: "text" }
+          - { label: "Restaurant Image", name: "restaurant_image", widget: "image" }
+
+    - name: "featured_specials"
+      label: "Featured Specials"
+      file: "src/_includes/components/featured-specials-card.html"
+      fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Price", name: "price", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }

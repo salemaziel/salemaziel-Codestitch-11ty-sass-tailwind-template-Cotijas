@@ -688,6 +688,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      
     }),
     minWidth: ({ theme }) => ({
       ...theme('spacing'),
@@ -826,6 +827,10 @@ module.exports = {
       xl: '1140px',
       '2xl': '1280px',
       '3xl': '1536px',
+      '4xl': '1920px',
+      '5xl': '2560px',
+      '6xl': '3840px',
+      '7xl': '5120px',
     },
     scrollMargin: ({ theme }) => ({
       ...theme('spacing'),
@@ -1064,6 +1069,14 @@ module.exports = {
       30: '30',
       40: '40',
       50: '50',
+    },
+  },
+  extend: {
+    fontFamily: {
+      'pacifico' : ['Pacifico', 'cursive'],
+      'roboto' : ['Roboto', 'sans-serif'],
+      'poppins' : ['Poppins', 'sans-serif'],
+      'montserrat' : ['Montserrat', 'sans-serif'],
     },
   },
   plugins: [],

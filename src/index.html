@@ -10,14 +10,8 @@ eleventyNavigation:
 ---
 
 {% extends "layouts/base2.html" %} {% block head %}
-<link
-	rel="stylesheet"
-	href="/assets/css/local.css"
-/>
-<link
-	rel="stylesheet"
-	href="/assets/css/critical.css"
-/>
+<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="/assets/css/critical.css" />
 
 <!-- Script for Netlify Identity -->
 <script
@@ -36,99 +30,119 @@ eleventyNavigation:
 	}
 </script>
 
-    <!-- JSON Schema Markup -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "LocalBusiness",
-            "name": "{{ client.name }}",
-            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
-            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
-            {% if client.email %}"email": "{{ client.email }}",{% endif %}
-            {% if client.address %}
-                "address": {
-                    "@type": "PostalAddress"{% if client.address.lineOne %},
-                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
-                    {% endif %}
-                    {% if client.address.city %},
-                        "addressLocality": "{{ client.address.city }}"
-                    {% endif %}
-                    {% if client.address.state %},
-                        "addressRegion": "{{ client.address.state }}"
-                    {% endif %}
-                    {% if client.address.zip %},
-                        "postalCode": "{{ client.address.zip }}"
-                    {% endif %}
-                    {% if client.address.country %},
-                        "addressCountry": "{{ client.address.country }}"
-                    {% endif %}
-                },
-            {% endif %}
-            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
-            {% if client.socials %}
-                "sameAs": [{% for platform, url in client.socials %}
-                        {% if not loop.first %},{% endif %}
-                        "{{ url }}"
-                    {% endfor %}]
-            {% endif %}
-        }
-    </script>
+<!-- JSON Schema Markup -->
+<script type="application/ld+json">
+	{
+	    "@context": "http://schema.org",
+	    "@type": "LocalBusiness",
+	    "name": "{{ client.name }}",
+	    {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+	    {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+	    {% if client.email %}"email": "{{ client.email }}",{% endif %}
+	    {% if client.address %}
+	        "address": {
+	            "@type": "PostalAddress"{% if client.address.lineOne %},
+	                "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+	            {% endif %}
+	            {% if client.address.city %},
+	                "addressLocality": "{{ client.address.city }}"
+	            {% endif %}
+	            {% if client.address.state %},
+	                "addressRegion": "{{ client.address.state }}"
+	            {% endif %}
+	            {% if client.address.zip %},
+	                "postalCode": "{{ client.address.zip }}"
+	            {% endif %}
+	            {% if client.address.country %},
+	                "addressCountry": "{{ client.address.country }}"
+	            {% endif %}
+	        },
+	    {% endif %}
+	    {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+	    {% if client.socials %}
+	        "sameAs": [{% for platform, url in client.socials %}
+	                {% if not loop.first %},{% endif %}
+	                "{{ url }}"
+	            {% endfor %}]
+	    {% endif %}
+	}
+</script>
 {% endblock %} {% block body %}
 
-<section class="relative bg-gray-50 dark:bg-gray-800" x-data="{ mobileNavOpen: false }">
-	<div class="relative z-10 pt-12 pb-20 lg:pt-20" style="">
-	  <div class="container px-4 mx-auto">
-		<div class="flex flex-wrap -mx-4">
-		  <div class="flex items-center w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
-			<div class="w-full text-center lg:text-left">
-			  <div class="max-w-md mx-auto lg:mx-0"></div>
-			  <div class="max-w-sm mx-auto lg:mx-0">
-				<h2 class="mb-3 text-4xl font-bold leading-10 lg:text-5xl font-heading">
-				  <span class="w-full text-red-600">Cotijas</span>
-				  <br>
-				  
-					Mexican Grill
-					
-					& Seafood
-				  
-				</h2>
-				<div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
-				  <div class="w-full px-4 mb-4 md:w-1/2 md:mb-0">
-					<p class="mb-6 leading-loose text-gray-400">
-					  3595 Fairmount Ave
-					  <br>
-					  San Diego, CA, 92105
-					</p>
-				  </div>
-				  <div class="w-full px-4 mb-4 md:w-1/2 md:mb-0">
-					<p class="mb-0 leading-loose text-gray-400 text-nowrap">
-					  Mon-Thu: 8am - 10pm
-					  <br>
-					  Fri-Sun: 8am - 11pm
-					</p>
-				  </div>
+<!-- <section class="relative bg-gray-50 dark:bg-gray-800" x-data="{ mobileNavOpen: false }"> -->
+<section class="relative" x-data="{ mobileNavOpen: false }">
+	<div class="relative z-10 pt-12 pb-20 lg:pt-28">
+		<div class="container px-4 mx-auto">
+			<div class="flex flex-wrap -mx-4">
+				<div class="flex items-center w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
+					<div class="w-full text-center lg:text-left">
+						<div class="max-w-md mx-auto lg:mx-0"></div>
+						<div class="max-w-sm mx-auto lg:mx-0">
+							<h2
+								class="mb-3 text-4xl font-bold leading-10 text-black lg:text-5xl font-montserrat dark:text-gray-300"
+							>
+								<span class="w-full text-red-600">Cotijas</span>
+								<br />
+
+								Mexican Grill & Seafood
+							</h2>
+							<div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
+								<div class="w-full px-4 mb-4 md:w-1/2 md:mb-0">
+									<p class="mb-6 leading-loose text-gray-400">
+										{{ client.address.lineOne }}
+										<br />
+										{{ client.address.city }}, {{ client.address.state }}, {{
+										client.address.zip }}
+									</p>
+								</div>
+								<div class="w-full px-4 mb-4 md:w-1/2 md:mb-0">
+									<p class="mb-0 leading-loose text-gray-400 text-nowrap">
+										Mon-Thu: {{ client.hours.MonThu }}
+										<br />
+										Fri-Sun: {{ client.hours.FriSun }}
+									</p>
+								</div>
+							</div>
+							<div class="justify-center text-center">
+								<a
+									class="inline-block w-full px-6 py-2 mb-3 font-semibold leading-loose text-center text-white transition duration-200 bg-red-600 lg:mb-0 lg:mr-0 lg:w-full hover:bg-red-800 rounded-l-xl rounded-t-xl"
+									href="#"
+									>Order Online</a
+								>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="justify-center text-center"><a class="inline-block w-full px-6 py-2 mb-3 font-semibold leading-loose text-center text-white transition duration-200 bg-red-600 lg:mb-0 lg:mr-0 lg:w-full hover:bg-red-800 rounded-l-xl rounded-t-xl" href="#">Order Online</a></div>
-			  </div>
+				<div class="w-full px-4 lg:w-1/2">
+					<div class="flex flex-wrap lg:mb-4 lg:ml-6">
+						<img
+							class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-1/3 rounded-4xl lg:rounded-br-none"
+							src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Camarones-a-la-diabla-jpg-1723801184194.webp"
+							alt=""
+						/>
+						<img
+							class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-2/3 rounded-4xl lg:rounded-bl-none"
+							src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/square-PXL-20240726-235637047-MP-2000x.jpg"
+							alt=""
+						/>
+					</div>
+					<div class="flex flex-wrap lg:mb-4 lg:mr-6">
+						<img
+							class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-2/3 rounded-4xl lg:rounded-br-none"
+							src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Beer-buckets.jpg"
+							alt=""
+						/>
+						<img
+							class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-1/3 rounded-4xl lg:rounded-bl-none"
+							src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Large-birria-tacos.jpg"
+							alt=""
+						/>
+					</div>
+				</div>
 			</div>
-		  </div>
-		  <div class="w-full px-4 lg:w-1/2">
-			<div class="flex flex-wrap lg:mb-4 lg:ml-6">
-			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-1/3 rounded-4xl lg:rounded-br-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Camarones-a-la-diabla-jpg-1723801184194.webp" alt="">
-			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-2/3 rounded-4xl lg:rounded-bl-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/square-PXL-20240726-235637047-MP-2000x.jpg" alt="">
-			</div>
-			<div class="flex flex-wrap lg:mb-4 lg:mr-6">
-			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-2/3 rounded-4xl lg:rounded-br-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Beer-buckets.jpg" alt="">
-			  <img class="object-cover w-full h-64 p-2 md:w-1/2 lg:w-1/3 rounded-4xl lg:rounded-bl-none" src="https://static.shuffle.dev/uploads/files/a4/a4b7e9209d960519f609b58a4eda7bfd755319d1/Large-birria-tacos.jpg" alt="">
-			</div>
-		  </div>
 		</div>
-	  </div>
 	</div>
-  </section>
-
-
-
+</section>
 
 <section class="relative h-[500px]">
 	<img
@@ -139,40 +153,37 @@ eleventyNavigation:
 	<div
 		class="absolute inset-0 flex flex-col items-start justify-center p-8 bg-black bg-opacity-50"
 	>
-	<div class="container px-4 mx-auto">
-		
-		<h1 class="mb-4 text-4xl font-bold text-white">
-			{{client.name}}
-		</h1>
-		<p class="mb-4 text-xl text-white">
-			{{client.address.lineOne}} <br />
-			{{client.address.city}} {{client.address.state}}
-			{{client.address.zip}}
-		</p>
-		<p class="mb-6 text-xl text-white">
-			Mon-Thu: 8am - 10pm | Fri-Sun: 8am - 11pm
-		</p>
-		<button
-			class="px-6 py-3 text-xl text-white bg-red-500 rounded-lg hover:bg-red-600"
-		>
-			Order Online
-		</button>
-	</div>
+		<div class="container px-4 mx-auto">
+			<h1 class="mb-4 text-4xl font-bold text-white">{{ client.name }}</h1>
+			<p class="mb-4 text-xl text-white">
+				{{ client.address.lineOne }} <br />
+				{{ client.address.city }} {{ client.address.state }} {{
+				client.address.zip }}
+			</p>
+			<p class="mb-6 text-xl text-white">
+				Mon-Thu: {{ client.hours.MonThu }} | Fri-Sun: {{ client.hours.FriSun }}
+			</p>
+			<button
+				class="px-6 py-3 text-xl text-white bg-red-500 rounded-lg hover:bg-red-600"
+			>
+				Order Online
+			</button>
+		</div>
 	</div>
 </section>
 
 <section class="container px-4 py-12 mx-auto">
 	<div class="flex flex-wrap -mx-4">
 		<div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
-			<h2 class="mb-4 text-3xl font-bold">
+			<h2 class="mb-4 text-3xl font-bold font-montserrat">
 				Welcome to Cotijas Mexican Grill and Seafood
 			</h2>
-			<p class="mb-4 text-gray-700">
+			<p class="mb-4 text-gray-700 font-monserrat">
 				Opening under new management in 2021. Lorem ipsum dolor sit amet,
 				consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 				et dolore magna aliqua.
 			</p>
-			<p class="text-gray-700">
+			<p class="text-gray-700 font-montserrat">
 				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 				ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 				reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -280,15 +291,16 @@ eleventyNavigation:
 		<div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
 			<h2 class="mb-4 text-3xl font-bold">Location</h2>
 			<p class="mb-2 text-xl">{{client.name}}</p>
-			<p class="mb-4 text-xl">{{client.address.city}} {{client.address.state}}
-				{{client.address.zip}}</p>
+			<p class="mb-4 text-xl">
+				{{client.address.city}} {{client.address.state}} {{client.address.zip}}
+			</p>
 			<p class="mb-4 text-xl">{{client.phoneFormatted}}</p>
 			<h3 class="mb-2 text-2xl font-bold">Hours of Operation</h3>
 			<p class="mb-1">Monday - Thursday: 8am - 10pm</p>
 			<p class="mb-4">Friday - Sunday: 8am - 11pm</p>
 		</div>
 		<div class="w-full px-4 md:w-1/2">
-		<!--	<img
+			<!--	<img
 				src="map.png"
 				alt="Restaurant Location Map"
 				class="w-full h-auto rounded-lg shadow-lg"
@@ -297,14 +309,14 @@ eleventyNavigation:
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.2222241727227!2d-117.10182485206931!3d32.74575493125262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9541492b869ab%3A0x88e5ef22dc35c99c!2sCotija&#39;s%20Mex%20Grill%20and%20Seafood!5e0!3m2!1sen!2sus!4v1691640682123!5m2!1sen!2sus"
 				width="600"
 				height="450"
-				style="border:0;"
+				style="border: 0"
 				allowfullscreen=""
 				loading="lazy"
 				class="w-full h-auto rounded-lg shadow-lg"
 			></iframe>
+		</div>
 	</div>
 </section>
 
-{% include 'components/featured-specials-slider.html' %}
-
-{% include 'components/cta.html' %} {% endblock %}
+{% include 'components/featured-specials-slider.html' %} {% include
+'components/cta.html' %} {% endblock %}

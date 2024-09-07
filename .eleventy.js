@@ -2,6 +2,9 @@
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
+const Image = require("@11ty/eleventy-img");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
+//const pluginAlpineJs = require("eleventy-plugin-alpinejs");
 
 // Configs
 const configCss = require("./src/config/css");
@@ -65,6 +68,26 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
     /**
+     *  SHARP IMAGES 
+     *  Automatically resize images using the sharp library
+     *  https://github.com/codestitchofficial/eleventy-plugin-sharp-images
+     */
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/assets/images",
+        outputDir: "public/assets/images",
+    });
+
+
+    /**
+     *  ALPINE JS 
+     *  Adds Alpine JS to the HTML
+     *  https://github.com/eleventy/eleventy-plugin-alpinejs    
+     */
+    /*eleventyConfig.addPlugin(pluginAlpineJs);*/
+
+
+
+    /**
      *  MINIFIER 
      *  When in production ("npm run build" is ran), minify all HTML, CSS, JSON, XML, XSL and webmanifest files.
      *  https://github.com/benjaminrancourt/eleventy-plugin-files-minifier
@@ -82,10 +105,15 @@ module.exports = function (eleventyConfig) {
     ========================================================================*/
     /** https://www.11ty.dev/docs/copy/ */
 
-    eleventyConfig.addPassthroughCopy("./src/assets");
+    eleventyConfig.addPassthroughCopy("./src/assets", {
+        filter: [
+            "**/*",
+            "!**/*.js"
+        ]
+    });
     // Passthrough for CSS ? Unnecessary?
     //eleventyConfig.addPassthroughCopy("src/assets/css");
-    eleventyConfig.addWatchTarget('././src/assets/scss/tailwind.scss')
+    //eleventyConfig.addWatchTarget('././src/assets/scss/tailwind.scss')
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
     /**=====================================================================
@@ -117,6 +145,43 @@ module.exports = function (eleventyConfig) {
      *  Use - {% year %}
      */
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+
+    /**
+     *  Optimizes images
+     *  Use - {% year %}
+     */
+
+	eleventyConfig.addShortcode("image", async function (src, alt, widths = [300, 600], sizes = "100vh") {
+		let metadata = await Image(src, {
+			widths,
+			formats: ["avif", "jpeg"],
+		});
+
+		let imageAttributes = {
+			alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+		};
+
+		let options = {
+			// HTML attributes added to `<picture>` (left out if <img> is used)
+			// Added in v4.0.0
+			pictureAttributes: {},
+
+			// Condense HTML output to one line (no new lines)
+			// Added in v0.7.3
+			whitespaceMode: "inline", // or: "block"
+		};
+
+		// You bet we throw an error on a missing alt (alt="" works okay)
+		return Image.generateHTML(metadata, imageAttributes);
+	});
+
+
+    eleventyConfig.addNunjucksAsyncShortcode("footerYear", async () => `${new Date().getFullYear()}`);
+
     /**=====================================================================
                                 END SHORTCODES
     =======================================================================*/

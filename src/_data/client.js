@@ -16,6 +16,10 @@ module.exports = {
         "facebook": "https://www.facebook.com/",
         "instagram": "https://www.instagram.com/",
     },
+    "hours": {
+        "MonThu": "8am - 10pm",
+        "FriSun": "8am - 11pm"
+    },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     "domain": "https://cotijas-demo11.netlify.app"
 };
